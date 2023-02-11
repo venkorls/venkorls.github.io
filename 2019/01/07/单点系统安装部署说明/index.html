@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="CAS安装部署手册">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CAS安装部署手册">
+<meta property="og:url" content="http://yoursite.com/2019/01/07/单点系统安装部署说明/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="CAS安装部署手册">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-07T07:22:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CAS安装部署手册">
+<meta name="twitter:description" content="CAS安装部署手册">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/07/单点系统安装部署说明/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>CAS安装部署手册 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/单点系统安装部署说明/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CAS安装部署手册
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-07 15:08:57 / Modified: 15:22:17" itemprop="dateCreated datePublished" datetime="2019-01-07T15:08:57+08:00">2019-01-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/07/单点系统安装部署说明/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/07/单点系统安装部署说明/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CAS安装部署手册<br><a id="more"></a></p>
+<p>#CAS安装部署手册</p>
+<p>##1、编写目的</p>
+<p>指导项目实施人员自行安装单点登录系统。</p>
+<p>##2、软件概述</p>
+<p>该软件是东方国信的一个企业级、开源项目，旨在为Web应用系统提供一种可靠的单点登录解决方法（属于Web SSO）。单点登录（Single Sign-On ,简称SSO）是目前比较流行的服务于企业业务整合的解决方案之一，SSO使得在多个应用的系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。</p>
+<p>CAS结构体系包括两部分：CAS客户端（CAS  Client）、CAS服务端（CAS  Server）。CAS客户端以过滤器的形式配置于应用之中，保护受保护的资源。CAS服务端则需独立部署。其中，CAS Client负责处理对客户端受保护资源的访问请求，需要对请求方进行身份认证时，重定向到CAS Server进行认证。CAS Server负责完成对用户的认证工作，CAS Server 会处理用户名和密码等凭证(Credentials)信息，通过认证的Web Broswer将得到CAS服务端产生的一个相当长度、唯一、不可伪造的 Service Ticket，并缓存以待Web Broswer再次请求受保护资源时验证。 </p>
+<p>##4、运行环境</p>
+<ul>
+<li>Jdk1.7以上版本 </li>
+<li>Tomcat7以上版本</li>
+<li>mysql,oracle等主流关系型数据库</li>
+<li>redis数据库（可选）分布式部署时需要。单节点部署不需要。</li>
+</ul>
+<p>##5、安装说明</p>
+<p>1、更改cas.properties文件 </p>
+<pre><code>文件路径/WEB-INF/下
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	#此地址为cas服务端前缀</span><br><span class="line"></span><br><span class="line">    server.prefix=http://127.0.0.1:8080/cas</span><br><span class="line">    cas.securityContext.serviceProperties.service=$&#123;server.prefix&#125;/services/j_acegi_cas_security_check</span><br><span class="line"></span><br><span class="line">    # Names of roles allowed to access the CAS service manager</span><br><span class="line"></span><br><span class="line">    cas.securityContext.serviceProperties.adminRoles=ROLE_ADMIN</span><br><span class="line"></span><br><span class="line">    cas.securityContext.casProcessingFilterEntryPoint.loginUrl=$&#123;server.prefix&#125;/login</span><br><span class="line"></span><br><span class="line">    cas.securityContext.ticketValidator.casServerUrlPrefix=$&#123;server.prefix&#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    #modify 2012-1-31</span><br><span class="line"></span><br><span class="line">    #cas.themeResolver.defaultThemeName=cas-theme-default</span><br><span class="line"></span><br><span class="line">    #cas.viewResolver.basename=default_views</span><br><span class="line"></span><br><span class="line">	#配置缺省主题样式</span><br><span class="line"></span><br><span class="line">    cas.themeResolver.defaultThemeName=cas-theme-bonc</span><br><span class="line"></span><br><span class="line">	#配置视图页面集</span><br><span class="line"></span><br><span class="line">    cas.viewResolver.basename=bonc_views</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    host.name=cas</span><br><span class="line"></span><br><span class="line">	#配置默认跳转页面,如果在login时的service参数与cas.default.portal的值不同则会强制跳转到此地址，如果没有service参数则不处理</span><br><span class="line"></span><br><span class="line">    cas.default.portal=http://127.0.0.1:8080/portal/</span><br><span class="line"></span><br><span class="line">    #配置数据库方言</span><br><span class="line"></span><br><span class="line">    database.hibernate.dialect=org.hibernate.dialect.MySQLDialect</span><br><span class="line"></span><br><span class="line">    #database.hibernate.dialect=org.hibernate.dialect.HSQLDialect</span><br><span class="line"></span><br><span class="line">    #hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect</span><br><span class="line"></span><br><span class="line">    #hibernate.dialect=org.hibernate.dialect.Oracle9iDialect</span><br><span class="line"></span><br><span class="line">    #hibernate.dialect=org.hibernate.dialect.Oracle10gDialect</span><br><span class="line"></span><br><span class="line">    #hibernate.dialect=org.hibernate.dialect.Oracle12cDialect</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #add by 2011.10.31</span><br><span class="line"></span><br><span class="line">	#cas验证登录时查询数据库的sql语句</span><br><span class="line"></span><br><span class="line">    db.authentication.sqlWithSHA1=select lower(password) from userinfo  where lower(login_id)=lower(?)</span><br><span class="line"></span><br><span class="line">    db.authentication.sqlWithMD5=select lower(password) from userinfo  where lower(login_id)=lower(?) </span><br><span class="line"></span><br><span class="line">    db.authentication.sql=select password from userinfo  where lower(login_id)=lower(?)</span><br><span class="line"></span><br><span class="line">	#cas短信验证是，查询用户手机号码的sql语句</span><br><span class="line"></span><br><span class="line">	db.authentication.smsValidateSql=SELECT MOBILE FROM userinfo where LOGIN_ID=&quot;?&quot; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #db.driverClassName=oracle.jdbc.driver.OracleDriver</span><br><span class="line"></span><br><span class="line">    #db.url=jdbc:oracle:thin:@192.168.0.169:1521:orcl</span><br><span class="line"></span><br><span class="line">    #db.url=jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 132.35.224.46)(PORT = 1521)) (ADDRESS = (PROTOCOL = TCP)(HOST = 132.35.224.47)(PORT = 1521))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = odba_ao_076))) </span><br><span class="line"></span><br><span class="line">    #db.username=security_hn</span><br><span class="line"></span><br><span class="line">    #db.password=SECURITY_HN_123</span><br><span class="line"></span><br><span class="line">    #db.url=jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=132.35.224.46)(PORT=1521))(ADDRESS=(PROTOCOL=TCP)(HOST=132.35.224.47)(PORT=1521))(LOAD_BALANCE = yes)(CONNECT_DATA=(SERVER = DEDICATED)(SERVICE_NAME = odba_clyx)))</span><br><span class="line"></span><br><span class="line">    #db.username=security_ys</span><br><span class="line"></span><br><span class="line">    #db.password=security_ys</span><br><span class="line"></span><br><span class="line">    #cas登录验证所需连接的，数据库信息</span><br><span class="line"></span><br><span class="line">    db.driverClassName=com.mysql.jdbc.Driver</span><br><span class="line"></span><br><span class="line">    db.url=jdbc:mysql://127.0.0.1:3306/security?autoReconnect=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF8</span><br><span class="line"></span><br><span class="line">    db.username=root</span><br><span class="line"></span><br><span class="line">    db.password=123456</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    #配置c3p0连接池</span><br><span class="line"></span><br><span class="line">    c3p0.max_size=100</span><br><span class="line"></span><br><span class="line">    c3p0.min_size=5</span><br><span class="line"></span><br><span class="line">    c3p0.initial_pool_size=20</span><br><span class="line"></span><br><span class="line">    c3p0.max_idle_time=60</span><br><span class="line"></span><br><span class="line">    c3p0.acquire_increment=5</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">#配置redis信息（可选），启用/禁用redis需要   在WEB-INF/spring-configuration/ticketRegistry.xml中配置，具体配置请参阅ticketRegistry.xml中的注释以及启用redis版的cas 文档</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    redis_database_num=0</span><br><span class="line"></span><br><span class="line">    hosts=192.168.30.28</span><br><span class="line"></span><br><span class="line">    port=31525</span><br><span class="line"></span><br><span class="line">    max_active=100</span><br><span class="line"></span><br><span class="line">    max_idle=10</span><br><span class="line"></span><br><span class="line">    max_wait=5000</span><br><span class="line"></span><br><span class="line">    st_time=3600000</span><br><span class="line"></span><br><span class="line">    tgt_time=7200000</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	#登录时手机短信验证码配置</span><br><span class="line"></span><br><span class="line">smsValidate_service=http://202.101.89.186:9090/WebServiceApp/ws/integralService?wsdl</span><br><span class="line"> smsValidate_time=1</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#是否开启软件注册检测</span><br><span class="line">cas.enableLicense=false</span><br><span class="line"></span><br><span class="line">#是否使用自定义的验证规则（如：用户连续输入密码错误二次，开启短信验证）</span><br><span class="line">cas.enableCustomerDefinedRegular=false</span><br><span class="line">cas.extraValidateLoginErrorTimes=2</span><br><span class="line"></span><br><span class="line">#getTenantInfoUrl=http://172.16.61.244:8080/security/rest/tenant/list</span><br><span class="line"></span><br><span class="line">#用于上传登陆主题的备份地址</span><br><span class="line">backupOfThemefile=</span><br><span class="line"></span><br><span class="line">#自定义验证规则服务所在地址</span><br><span class="line">customerSmsRuleService=http://172.16.64.232:8769/authenticationrules/matchRule</span><br><span class="line">timeScope=30</span><br><span class="line"></span><br><span class="line">#是否需要用户映射</span><br><span class="line">userMapping=false</span><br><span class="line"></span><br><span class="line">#默认的cas登陆相关的配置信息</span><br><span class="line">cas.theme=bonc</span><br><span class="line">cas.title=BONC-SSO</span><br><span class="line">cas.logo=unicomlogo.png</span><br><span class="line">cas.enableAuthCode=false</span><br><span class="line">cas.enableFindPassword=true</span><br><span class="line">cas.enableRememberPassword=false</span><br><span class="line">cas.enableClientEncryption=false</span><br><span class="line">cas.enableSmsAuthCode=false</span><br><span class="line">cas.enableMutitimesLogin=false</span><br><span class="line">#5次登录错误冻结账号，cas.loginErrorTimes为错误次数，cas.freezenAccountURL这个指的是 security模块提供的冻结账户的服务地址</span><br><span class="line">cas.allowFrozenAccount=true</span><br><span class="line">cas.loginErrorTimes=5</span><br><span class="line">cas.loginErrorDuration=5</span><br><span class="line">cas.freezenAccountURL=http://127.0.0.1:8080/security/rest/account/block</span><br></pre></td></tr></table></figure>
+<p>2、根据需要配置文件ticketRegistry.xml</p>
+<pre><code>文件位置在/WEB-INF/spring-configuration目录下
+</code></pre><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">      <span class="attr">xmlns:p</span>=<span class="string">"http://www.springframework.org/schema/p"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">      <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   	Configuration for the default TicketRegistry which stores the tickets in-memory and cleans them out as specified intervals.</span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;/<span class="name">description</span>&gt;</span></span><br><span class="line"></span><br><span class="line">      </span><br><span class="line"></span><br><span class="line">   <span class="comment">&lt;!-- Ticket Registry --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"ticketRegistry"</span> <span class="attr">class</span>=<span class="string">"org.jasig.cas.ticket.registry.DefaultTicketRegistry"</span> /&gt;</span> </span><br><span class="line"></span><br><span class="line">#使用redis时，使用下边这一个bean，并注释其他bean。反之则反是。</span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--  &lt;bean id="ticketRegistry" class="org.jasig.cas.ticket.registry.RedisTicketRegistry" /&gt; --&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--Quartz --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- TICKET REGISTRY CLEANER --&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"ticketRegistryCleaner"</span> <span class="attr">class</span>=<span class="string">"org.jasig.cas.ticket.registry.support.DefaultTicketRegistryCleaner"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">	<span class="attr">p:ticketRegistry-ref</span>=<span class="string">"ticketRegistry"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"jobDetailTicketRegistryCleaner"</span> <span class="attr">class</span>=<span class="string">"org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">	<span class="attr">p:targetObject-ref</span>=<span class="string">"ticketRegistryCleaner"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">	<span class="attr">p:targetMethod</span>=<span class="string">"clean"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"triggerJobDetailTicketRegistryCleaner"</span> <span class="attr">class</span>=<span class="string">"org.springframework.scheduling.quartz.SimpleTriggerBean"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">	<span class="attr">p:jobDetail-ref</span>=<span class="string">"jobDetailTicketRegistryCleaner"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">	<span class="attr">p:startDelay</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">	<span class="attr">p:repeatInterval</span>=<span class="string">"5000000"</span> /&gt;</span>  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>3、cas配置表初始化</p>
+<p>  cas的部分个性化参数配置功能对应了一张数据表cas_properties，该表必须放在当前系统中配置的数据源中。<br>表结构以入初始化数据的脚本如下（该脚本在程序包中的/WEB-INF/classes/下也有，即init_mysql.sql,init_oracle.sql;</p>
+<ul>
+<li>init_mysql.sql,mysql版脚本</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * To change this license header, choose License Headers in Project Properties.</span></span><br><span class="line"><span class="comment"> * To change this template file, choose Tools | Templates</span></span><br><span class="line"><span class="comment"> * and open the template in the editor.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Author:  song</span></span><br><span class="line"><span class="comment"> * Created: 2017-1-10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建个性化配置表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> cas_properties (</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">bigint</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  pkey <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  pvalue <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  pname <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">-- Query: select *   FROM  security.casproperties</span></span><br><span class="line"><span class="comment">LIMIT 0, 1000</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-- Date: 2017-01-10 17:51</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">21</span>,<span class="string">'cas.title'</span>,<span class="string">'河南联通大数据精准化营销平台'</span>,<span class="string">'登录系统名称'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">22</span>,<span class="string">'cas.logo'</span>,<span class="string">'unicomlogo.png'</span>,<span class="string">'登录系统logo'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">23</span>,<span class="string">'cas.enableAuthCode'</span>,<span class="string">'false'</span>,<span class="string">'是否启用验证码功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">24</span>,<span class="string">'cas.enableFindPassword'</span>,<span class="string">'false'</span>,<span class="string">'是否启用找回密码功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">25</span>,<span class="string">'cas.enableRememberPassword'</span>,<span class="string">'true'</span>,<span class="string">'是否启用记住密码功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">26</span>,<span class="string">'cas.enableClientEncryption'</span>,<span class="string">'false'</span>,<span class="string">'是否启用客户端密码加密功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">26</span>,<span class="string">'cas.enableSmsAuthCode'</span>,<span class="string">'true'</span>,<span class="string">'是否开启短信验证'</span>);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>, pkey, pvalue, pname) 	<span class="keyword">VALUES</span> (<span class="number">28</span>, <span class="string">'cas.theme'</span>, <span class="string">'bonc'</span>, <span class="string">'登录界面主题'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>, pkey, pvalue, pname) 	<span class="keyword">VALUES</span> (<span class="number">29</span>, <span class="string">'cas.enableMutitimesLogin'</span>, <span class="string">'true'</span>, <span class="string">'是否开启允许重复登录'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">登录日志与在线用户表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> online_user_info (</span><br><span class="line"><span class="keyword">id</span> <span class="built_in">BIGINT</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT, </span><br><span class="line">clientip <span class="built_in">VARCHAR</span>(<span class="number">255</span>),</span><br><span class="line"> login_id <span class="built_in">VARCHAR</span>(<span class="number">255</span>),</span><br><span class="line"> login_time DATETIME, </span><br><span class="line">logout_time DATETIME, </span><br><span class="line"><span class="keyword">online</span> <span class="built_in">BIT</span>(<span class="number">1</span>), </span><br><span class="line">tgt <span class="built_in">VARCHAR</span>(<span class="number">255</span>), </span><br><span class="line">app_code <span class="built_in">VARCHAR</span>(<span class="number">255</span>), </span><br><span class="line">online1 <span class="built_in">BIT</span>(<span class="number">1</span>), </span><br><span class="line">PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> 登录日志表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> LOGIN_LOG;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> LOGIN_LOG (</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">bigint</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  clientip <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  login_id <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  login_time datetime <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="keyword">success</span> <span class="built_in">bit</span>(<span class="number">1</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  tenant_id <span class="built_in">varchar</span>(<span class="number">30</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>init_oracle.sql oracle版脚本</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"> * To change this license header, choose License Headers in Project Properties.</span></span><br><span class="line"><span class="comment"> * To change this template file, choose Tools | Templates</span></span><br><span class="line"><span class="comment"> * and open the template in the editor.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Author:  song</span></span><br><span class="line"><span class="comment"> * Created: 2017-1-10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">创建个性化配置表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> cas_properties (</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">number</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> ,</span><br><span class="line">  pkey <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  pvalue <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  pname <span class="built_in">varchar</span>(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">-- Query: select *   FROM  security.casproperties</span></span><br><span class="line"><span class="comment">LIMIT 0, 1000</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">-- Date: 2017-01-10 17:51</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">21</span>,<span class="string">'cas.title'</span>,<span class="string">'河南联通大数据精准化营销平台'</span>,<span class="string">'登录系统名称'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">22</span>,<span class="string">'cas.logo'</span>,<span class="string">'unicomlogo.png'</span>,<span class="string">'登录系统logo'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">23</span>,<span class="string">'cas.enableAuthCode'</span>,<span class="string">'false'</span>,<span class="string">'是否启用验证码功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">24</span>,<span class="string">'cas.enableFindPassword'</span>,<span class="string">'false'</span>,<span class="string">'是否启用找回密码功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">25</span>,<span class="string">'cas.enableRememberPassword'</span>,<span class="string">'true'</span>,<span class="string">'是否启用记住密码功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">26</span>,<span class="string">'cas.enableClientEncryption'</span>,<span class="string">'false'</span>,<span class="string">'是否启用客户端密码加密功能'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>,pkey,pvalue,pname) <span class="keyword">VALUES</span> (<span class="number">26</span>,<span class="string">'cas.enableSmsAuthCode'</span>,<span class="string">'true'</span>,<span class="string">'是否开启短信验证'</span>);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>, pkey, pvalue, pname) 	<span class="keyword">VALUES</span> (<span class="number">28</span>, <span class="string">'cas.theme'</span>, <span class="string">'bonc'</span>, <span class="string">'登录界面主题'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> cas_properties (<span class="keyword">id</span>, pkey, pvalue, pname) 	<span class="keyword">VALUES</span> (<span class="number">29</span>, <span class="string">'cas.enableMutitimesLogin'</span>, <span class="string">'true'</span>, <span class="string">'是否开启允许重复登录'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">登录日志与在线用户表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> online_user_info (</span><br><span class="line"><span class="keyword">id</span> <span class="built_in">number</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span>, </span><br><span class="line">clientip VARCHAR2(<span class="number">255</span>),</span><br><span class="line"> login_id VARCHAR2(<span class="number">255</span>), </span><br><span class="line">login_time <span class="built_in">TIMESTAMP</span>(<span class="number">6</span>), </span><br><span class="line">logout_time <span class="built_in">TIMESTAMP</span>(<span class="number">6</span>),</span><br><span class="line"> online1 <span class="built_in">char</span>(<span class="number">1</span>), </span><br><span class="line">tgt VARCHAR2(<span class="number">255</span>), </span><br><span class="line">app_code VARCHAR2(<span class="number">255</span>),</span><br><span class="line"> PRIMARY <span class="keyword">KEY</span> (<span class="keyword">id</span>));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> 登录日志表</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">EXISTS</span> LOGIN_LOG;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> LOGIN_LOG (</span><br><span class="line">  <span class="keyword">id</span> <span class="built_in">number</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="literal">NULL</span> AUTO_INCREMENT,</span><br><span class="line">  clientip varchar2(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  login_id varchar2(<span class="number">255</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  login_time <span class="built_in">TIMESTAMP</span> <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  <span class="keyword">success</span> <span class="built_in">number</span>(<span class="number">1</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  tenant_id varchar2(<span class="number">30</span>) <span class="keyword">DEFAULT</span> <span class="literal">NULL</span>,</span><br><span class="line">  PRIMARY <span class="keyword">KEY</span> (<span class="string">`id`</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><strong>说明：以上数据在安装后必须初始化数据，一般安装后第一次启动，会自动生成cas_properties表，此时可不必执行建表语句。只执行insert语句即可，这些导入的数据不符合项目要求，可以通过手工修改表数据或用<a href="http://xxxx:8080/cas/config/edit.do打开配置界面修改。" target="_blank" rel="noopener">http://xxxx:8080/cas/config/edit.do打开配置界面修改。</a></strong></p>
+<p>##6、常见问题</p>
+<ol>
+<li><p>安装后CAS无法访问，报“cas服务无效”的错误，一般是什么情况？</p>
+<p>答：这种情况一般为cas.properties中的数据库配置不对，导致数据库连接不上。请仔细检查各项与数据库有关的配置是否正确，特别是关于hibernate的方言的配置容易遗漏。</p>
+</li>
+<li><p>登录界面不符合我们项目的要求，如何修改这个界面？<br>答：<br>新版本提供了在线更新主题功能，请访问$CASHOME/config/edit.do,$CASHOME代表cas应用主目录，此功能允许你选择主题与logo图标，并且允许你下载主题文件包，离线修改后，再上传并立即生效<br>如果你开启了多租户支持，不同租户可设定不同的主题风格。（详见用户使用手册）</p>
+<p>主题风格实现原理：</p>
+<p>cas的主题风格的实现机制是通过一套视图文件与一套样式与图片文件来实现的，当前用的视图与主题是在cas.properties文件 中的以下两项实现的：</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   #配置缺省主题样式</span><br><span class="line"></span><br><span class="line">   cas.themeResolver.defaultThemeName=cas-theme-bonc</span><br><span class="line"></span><br><span class="line">#配置视图页面集</span><br><span class="line"></span><br><span class="line">   cas.viewResolver.basename=bonc_views</span><br></pre></td></tr></table></figure>
+<p>此处只是指定用哪一种主题，这两个参数值对应着/WEB-INF/classes中的同名的properties文件，在这些文件中详细列出了使用的jsp，css文伯的路径，如果想改变当前主题风格，请修改这些jsp与css文件的内容即可。</p>
+<p>如果不想修改当前主题文件，想另外开发一套主题，可copy WEBROOT/themes/bonc目录到新的平级目录，另外在/WEB-INF/view/jsp/目录中复制bonc目录到一个平级新目录，这两个新目录名要保持一致，然后修改这些新目录中的文件达到修改主题的目的，注意修改好后，要修改上面提到的cas.properties中的两项配置。将bonc字符串换成你新建的目录名，同时要在/WEB-INF/classes中新建同名的两个properties文件 ，并修改里边的路径信息指向你新建的一套样式文件的路径。</p>
+<p>cas可以有多套预制主题文件，通过修改cas.properties文件中的对应配置，即可改变cas的缺省主题。</p>
+<ol>
+<li><p>tomcat升级后，访问某页面 报400错误，怎么办？</p>
+<p>答：tomcat升级到较高如8.1.x后，有可能会引起此问题，原因是高版本tomcat对url地址中的字符规范约束更严格，不能出现一些|线，或（），在cas客户端配置中的skipUrl属性中配置的过滤器拦截忽略的url正则模式中，有一段关于静态资源的匹配模式“<em>..jpg|png|….)”会导致此错误。有一个解决办法为将其改为“</em>.jpg$,*.png$,…..”，即拆开写，用逗号分隔开。</p>
+</li>
+</ol>
+<p>单点服务器在高版本的tomact服务器上的配置：<br>低版本：<br><code>.*\.(css|js|jpg|jpeg|bmp|png|gif|ico)$</code><br>高版本：<br><code>.*tpl$,.*css$,.*js$,.*jpg$,.*jpeg$,.*bmp$,.*png$,.*gif$,.*ico$</code></p>
+<ol>
+<li>希望cas缺省有验证码功能或者不想要验证码功能<br>答： 新版本提供了在线更新主题功能，请访问$CASHOME/config/edit.do,$CASHOME代表cas应用主目录，此功能允许你打开/关闭该功能。<br>注：有许多功能，如是否一个账户可以同时多重登录等都可以在这个界面进行配置，并且无需启动即刻生效。<br>如果你开启了多租户支持，不同租户可设定不同的主题风格。（详见用户使用手册）</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/07/Security系统部署说明/" rel="next" title="security系统部署说明书">
+                <i class="fa fa-chevron-left"></i> security系统部署说明书
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tgYVHQyjUbdejQfiqMrUz7Rq-gzGzoHsz',
+        appKey: 'dc8LuDhmj5ICoJLOt0qmwIo5',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

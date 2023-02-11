@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="安全接口文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安全接口文档">
+<meta property="og:url" content="http://yoursite.com/2019/01/07/安全接口文档/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安全接口文档">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-07T07:22:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="安全接口文档">
+<meta name="twitter:description" content="安全接口文档">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/07/安全接口文档/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>安全接口文档 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/07/安全接口文档/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">安全接口文档
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-07 15:08:57 / Modified: 15:22:33" itemprop="dateCreated datePublished" datetime="2019-01-07T15:08:57+08:00">2019-01-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/07/安全接口文档/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2019/01/07/安全接口文档/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>安全接口文档<br><a id="more"></a></p>
+<h1 id="安全接口文档"><a href="#安全接口文档" class="headerlink" title="安全接口文档"></a>安全接口文档</h1><h2 id="内容概要"><a href="#内容概要" class="headerlink" title="内容概要"></a>内容概要</h2><h3 id="接口概要"><a href="#接口概要" class="headerlink" title="接口概要"></a>接口概要</h3><p>安全接口主要对外提供用户/角色/组织机构管理,权限控制,租户管理三方面接口功能.</p>
+<h3 id="多租户接口使用说明"><a href="#多租户接口使用说明" class="headerlink" title="多租户接口使用说明"></a>多租户接口使用说明</h3><p>多租户接口使用过程中,尽量使用RESTful API ,Java API不一定会提供多租户的静态方法,需要在接口访问url上边添加tenant_id=×××的条件.注意,是”tenant_id”,需要完全对应.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:8080/security/rest/user/authenticate?account=xxx&amp;password=yyy&amp;tenant_id=uni076</span><br></pre></td></tr></table></figure>
+<h2 id="接口类型"><a href="#接口类型" class="headerlink" title="接口类型"></a>接口类型</h2><h3 id="Java-API"><a href="#Java-API" class="headerlink" title="Java API"></a>Java API</h3><p>如果使用dubbo分布式框架的话,可以在集成dubbo的前提下,编程直接调用Java API.</p>
+<blockquote>
+<p>com.bonc.security.SecurityClient</p>
+</blockquote>
+<p>安全base包提供一个客户端代理类,为所有单租户和部分多租户接口提供一个客户端代理类,方法名与下边具体接口说明中的方法签名一致.</p>
+<h3 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h3><p>按照通用调用RESTful方式请求,前段一般使用ajax请求,后端可通过以下几种方式:</p>
+<ol>
+<li>HttpURLConnection实现</li>
+<li>HttpClient实现</li>
+<li>Spring的RestTemplate</li>
+</ol>
+<h2 id="接口调用说明"><a href="#接口调用说明" class="headerlink" title="接口调用说明"></a>接口调用说明</h2><p>RESTful API 的使用中,需要将示例中的服务器地址端口改为项目中依赖的安全的服务地址.</p>
+<h3 id="用户相关"><a href="#用户相关" class="headerlink" title="用户相关"></a>用户相关</h3><p>用户实体json字典</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: 1,    //主键ID</span><br><span class="line">    &quot;userName&quot;: &quot;管理员&quot;,   //用户姓名</span><br><span class="line">    &quot;sexId&quot;: 1,    //性别码表ID</span><br><span class="line">    &quot;sex&quot;: &#123;    //性别实体json</span><br><span class="line">        &quot;sexCode&quot;: 1,    //性别编码</span><br><span class="line">        &quot;id&quot;: 1,     </span><br><span class="line">        &quot;sexName&quot;: &quot;男&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;loginId&quot;: &quot;admin&quot;,    //登录名</span><br><span class="line">    &quot;password&quot;: &quot;bonc&quot;,    //密码</span><br><span class="line">    &quot;email&quot;: &quot;1@163.com&quot;,    //邮箱</span><br><span class="line">    &quot;mobile&quot;: &quot;15201334444&quot;,    //手机号码</span><br><span class="line">    &quot;memo&quot;: &quot;&quot;,     //备注</span><br><span class="line">    &quot;isAdmin&quot;: true,    //是否是管理员</span><br><span class="line">    &quot;updateDate&quot;: 1499421909000,    //更新时间</span><br><span class="line">    &quot;createDate&quot;: null,    //创建时间</span><br><span class="line">    &quot;creatUser&quot;: &quot;&quot;,    //创建人ID</span><br><span class="line">    &quot;isNormal&quot;: null,    //账号状态(true/false)</span><br><span class="line">    &quot;orgs&quot;: [    //详见组织机构实体json字典</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;id&quot;: &quot;1&quot;,</span><br><span class="line">            &quot;orgName&quot;: &quot;系统租户&quot;,</span><br><span class="line">            &quot;type&quot;: &quot;111&quot;,</span><br><span class="line">            &quot;orgType&quot;: &#123;</span><br><span class="line">                &quot;id&quot;: &quot;111&quot;,</span><br><span class="line">                &quot;orgtypeName&quot;: &quot;行政机构&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;path&quot;: &quot;/root&quot;,</span><br><span class="line">            &quot;parentId&quot;: null,</span><br><span class="line">            &quot;memo&quot;: &quot;&quot;,</span><br><span class="line">            &quot;createTime&quot;: 1497234548000,</span><br><span class="line">            &quot;creatUser&quot;: &quot;1&quot;,</span><br><span class="line">            &quot;ord&quot;: null,</span><br><span class="line">            &quot;status&quot;: 1,</span><br><span class="line">            &quot;reserve1&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve2&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve3&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve4&quot;: &quot;1&quot;,</span><br><span class="line">            &quot;reserve5&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve6&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve7&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve8&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve9&quot;: &quot;&quot;,</span><br><span class="line">            &quot;reserve10&quot;: &quot;&quot;,</span><br><span class="line">            &quot;orgClass&quot;: null</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;roles&quot;: [    //详情见角色json字典</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;id&quot;: 1,</span><br><span class="line">            &quot;roleCode&quot;: &quot;root&quot;,</span><br><span class="line">            &quot;roleName&quot;: &quot;省级系统管理员&quot;,</span><br><span class="line">            &quot;createTime&quot;: null,</span><br><span class="line">            &quot;creatUser&quot;: &quot;&quot;,</span><br><span class="line">            &quot;parentId&quot;: 0</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;reserve1&quot;: null,    //预留的五个字段</span><br><span class="line">    &quot;reserve2&quot;: null,</span><br><span class="line">    &quot;reserve3&quot;: null,</span><br><span class="line">    &quot;reserve4&quot;: null,</span><br><span class="line">    &quot;reserve5&quot;: null</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="身份认证接口"><a href="#身份认证接口" class="headerlink" title="身份认证接口"></a>身份认证接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户/密码认证接口</td>
+<td><a href="http://127.0.0.1:8080/security/rest/user/authenticate?account=uni076&amp;password=bonc" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/user/authenticate?account=uni076&amp;password=bonc</a></td>
+<td>account:账户，password:密码</td>
+<td>{‘success’:’true’,’message’:’成功’,result:用户实体的json }</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户/密码认证接口</td>
+<td>boolean  authentication(String account ,String  password)</td>
+<td>account:账户名，password:口令密码</td>
+<td>true/false</td>
+</tr>
+</tbody>
+</table>
+<h4 id="得到当前登录用户"><a href="#得到当前登录用户" class="headerlink" title="得到当前登录用户"></a>得到当前登录用户</h4><p>a. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>取得当前登录用户对象</td>
+<td>Userinfo findCurrentUserinfo(HttpServletRequest request)</td>
+<td></td>
+<td>Userinfo对象</td>
+<td></td>
+</tr>
+<tr>
+<td>取得当前登录用户</td>
+<td>String findCurrentLoginId(HttpServletRequest request)</td>
+<td></td>
+<td>loginId</td>
+</tr>
+</tbody>
+</table>
+<h4 id="用户信息查询接口-根据用户id"><a href="#用户信息查询接口-根据用户id" class="headerlink" title="用户信息查询接口(根据用户id)"></a>用户信息查询接口(根据用户id)</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户信息查询</td>
+<td><a href="http://127.0.0.1:8080/security/rest/user/" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/user/</a> {id}</td>
+<td>用户id</td>
+<td>用户对象的序列化json串</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户信息查新</td>
+<td>Userinfo findUserByLoginId(String loginId)</td>
+<td>loginId:用户登录账号</td>
+<td>Userinfo对象</td>
+</tr>
+</tbody>
+</table>
+<h4 id="用户列表信息查询接口"><a href="#用户列表信息查询接口" class="headerlink" title="用户列表信息查询接口"></a>用户列表信息查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户列表查询接口(单条件精确匹配)</td>
+<td><a href="http://127.0.0.1:8080/security/rest/user/list?p=?&amp;v=" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/user/list?p=?&amp;v=</a>?</td>
+<td>P:用户属性(包括组织机构和角色)</td>
+<td>用户列表的序列化json串</td>
+<td>GET</td>
+<td>参数说明:参数 1-1</td>
+</tr>
+<tr>
+<td>用户列表查询接口(多条件)</td>
+<td><a href="http://127.0.0.1:8080/security/rest/user/condition?cond={&quot;loginId&quot;:&quot;admin&quot;,...}" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/user/condition?cond={&quot;loginId&quot;:&quot;admin&quot;,...}</a></td>
+<td>cond为一个表示条件的key/value组合</td>
+<td>用户对象的序列化json串</td>
+<td>GET</td>
+<td>参数说明:参数 1-2</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户列表查询接口(多条件map)</td>
+<td>List<user>  findUsersByCondition(Map condition)</user></td>
+<td>condition:属性条件组合 参数 1-2</td>
+<td>List<user>对象列表</user></td>
+<td>部分属性的值作为条件，各条件为and 关系</td>
+</tr>
+<tr>
+<td>用户列表查询接口(多条件map,带租户)</td>
+<td>List<user>  findUsersByCondition(Map condition,String tenant_id)</user></td>
+<td>condition:属性条件组合 参数 1-2 ; tenant_id:租户id</td>
+<td>List<user>对象列表</user></td>
+<td>部分属性的值作为条件，各条件为and 关系</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">参数 1-1</span><br><span class="line">/*</span><br><span class="line"> *用户列表查询接口(单条件&amp;精确匹配)请求报文参数说明</span><br><span class="line"> */</span><br><span class="line">    // p可取参数,没条件时, 默认查询所有</span><br><span class="line">    loginId    //用户登录ID</span><br><span class="line">    userName    //用户姓名</span><br><span class="line">    mobile    //用户手机号</span><br><span class="line">    email     //用户邮箱</span><br><span class="line">    roleId     //用户所属角色ID</span><br><span class="line">    roleCode    //用户所属角色编码</span><br><span class="line">    roleName    //用户所属角色名称</span><br><span class="line">    sexId      //用户性别对应码表ID</span><br><span class="line">    sexName    //用户性别(男/女)</span><br><span class="line">    orgId     //用户所属组织机构ID</span><br><span class="line">    orgName     //用户所属组织机构名称</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">参数 1-2</span><br><span class="line">/*</span><br><span class="line"> *用户列表查询接口(多条件)请求报文参数说明</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">    //cond参数可以取下边任意条件组合(注单条件的除外),各条件and连接,如果要查询null,赋值为null.没条件时, 默认查询所有</span><br><span class="line">    id      //用户ID</span><br><span class="line">    loginId     //用户登录名</span><br><span class="line">    username        //用户名</span><br><span class="line">    email       //用户邮箱</span><br><span class="line">    mobile      //用户手机号</span><br><span class="line">    sex.sexName     //用户性别(男/女)</span><br><span class="line">    roleId      //用户所属角色ID(单条件)</span><br><span class="line">    orginfoId       //用户所属组织ID(单条件)</span><br><span class="line">    //分页参数,可以作为cond参数查询</span><br><span class="line">    sort    //排序字段</span><br><span class="line">    sortType    //排序类型(DESC,ASC)</span><br><span class="line">    start     //从多少条开始</span><br><span class="line">    limit    //一页限制多少条</span><br></pre></td></tr></table></figure>
+<h4 id="用户数量查询接口"><a href="#用户数量查询接口" class="headerlink" title="用户数量查询接口"></a>用户数量查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户数量查询</td>
+<td><a href="http://127.0.0.1:8080/security/rest/user/count?cond={&quot;loginId&quot;:&quot;admin&quot;}" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/user/count?cond={&quot;loginId&quot;:&quot;admin&quot;}</a></td>
+<td>参数说明:loginId:登录ID;userName:用户姓名 (两参数都为模糊匹配)</td>
+<td>int</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户条数查询</td>
+<td>int findUserCount(Map&lt;String, Object&gt; map)</td>
+<td>loginId:用户登录账号 ;userName:用户姓名(两参数都为模糊匹配)</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<h4 id="用户拓展属性查询接口"><a href="#用户拓展属性查询接口" class="headerlink" title="用户拓展属性查询接口"></a>用户拓展属性查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户拓展属性列表信息查询</td>
+<td><a href="http://127.0.0.1:8080/security/rest/userExt/find?uid=90949&amp;p=mults" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/userExt/find?uid=90949&amp;p=mults</a></td>
+<td>uid:用户ID p:拓展属性编码</td>
+<td>String:用户拓展属值</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户拓展属性列表信息查询</td>
+<td>String findUserExtByCode(Long userId,String propCode)</td>
+<td>uid:用户id propCode:拓展属性编码</td>
+<td>String:拓展属性值</td>
+</tr>
+</tbody>
+</table>
+<h4 id="用户拓展属性集查询接口"><a href="#用户拓展属性集查询接口" class="headerlink" title="用户拓展属性集查询接口"></a>用户拓展属性集查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户拓展属性集信息查询</td>
+<td><a href="http://127.0.0.1:8080/security/rest/userExt/list/{id}" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/userExt/list/{id}</a></td>
+<td>用户id</td>
+<td>用户拓展属性的序列化json串</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户拓展属性集信息查询</td>
+<td>Map&lt;String, Object&gt; findUserExt(Long id)</td>
+<td>id : 用户id</td>
+<td>Map&lt;String, Object&gt;集合</td>
+</tr>
+</tbody>
+</table>
+<h4 id="用户的角色信息查询接口"><a href="#用户的角色信息查询接口" class="headerlink" title="用户的角色信息查询接口"></a>用户的角色信息查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户的角色信息查询接口</td>
+<td><a href="http://127.0.0.1:8080/security/rest/role/list?p=userId&amp;v=1" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/role/list?p=userId&amp;v=1</a></td>
+<td>p:userId(固定) v:用户Id</td>
+<td>角色列表的序列化json串</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户的角色信息查询接口</td>
+<td>List<roleinfo> findRolesByUserId(Long userId)</roleinfo></td>
+<td>userId : 用户id</td>
+<td>List<roleinfo></roleinfo></td>
+</tr>
+</tbody>
+</table>
+<h3 id="角色相关"><a href="#角色相关" class="headerlink" title="角色相关"></a>角色相关</h3><p>角色实体json字典</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: 1,    //角色ID</span><br><span class="line">    &quot;roleCode&quot;: &quot;root&quot;,     //角色编码</span><br><span class="line">    &quot;roleName&quot;: &quot;系统管理员&quot;,     //角色名称</span><br><span class="line">    &quot;createTime&quot;: null,     //创建日期</span><br><span class="line">    &quot;creatUser&quot;: &quot;1&quot;,     //创建用户ID</span><br><span class="line">    &quot;parentId&quot;: 0   //父级角色ID</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色信息查询接口</td>
+<td><a href="http://127.0.0.1:8080/security/rest/role/{id}" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/role/{id}</a></td>
+<td>角色id</td>
+<td>角色信息的序列化json串</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色信息查询接口</td>
+<td>Roleinfo findRoleById(Long id)</td>
+<td>id : 角色id</td>
+<td>Roleinfo对象信息</td>
+</tr>
+</tbody>
+</table>
+<h4 id="角色信息查询接口-多条件"><a href="#角色信息查询接口-多条件" class="headerlink" title="角色信息查询接口(多条件)"></a>角色信息查询接口(多条件)</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色信息查询接口(多条件)</td>
+<td><a href="http://127.0.0.1:8080/security/rest/role/condition?cond={&quot;roleCode&quot;:&quot;root&quot;}" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/role/condition?cond={&quot;roleCode&quot;:&quot;root&quot;}</a></td>
+<td>cond为一个表示条件的key/value组合</td>
+<td>角色信息的序列化json串</td>
+<td>GET</td>
+<td>条件说明:参数 2-1</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色信息查询接口(多条件)</td>
+<td>List<roleinfo> findRoleByCondition(Map&lt;String, Object&gt; condition)</roleinfo></td>
+<td>条件的map集合 参数2-1</td>
+<td>List<roleinfo></roleinfo></td>
+<td>map的key可取:key可取:id  roleName roleCode  creatUser  parentRole.id</td>
+</tr>
+<tr>
+<td>角色信息查询接口(多条件,带租户)</td>
+<td>List<roleinfo> findRoleByCondition(Map&lt;String, Object&gt; condition)</roleinfo></td>
+<td>condition:条件的map集合; tenant_id:租户id</td>
+<td>List<roleinfo></roleinfo></td>
+<td>map的key可取:key可取:参数 2-1</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">参数 2-1</span><br><span class="line">/*</span><br><span class="line"> * 角色信息查询接口(多条件)</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">    //cond参数可以取下边任意条件组合(注单条件的除外),各条件and连接,如果要查询null,赋值为null.没条件时, 默认查询所有</span><br><span class="line">    roleCode    //角色编码</span><br><span class="line">    roleName    //角色名称(模糊匹配)</span><br><span class="line">    createTime  //创建时间(可模糊匹配)</span><br><span class="line">    creatUser   //用户ID</span><br><span class="line">    parentRole.id   //父级角色ID</span><br><span class="line">    sort        //排序字段</span><br><span class="line">    sortType    //排序类型(DESC,ASC)</span><br><span class="line">    start       //开始条数</span><br><span class="line">    limit       //限制多少条</span><br></pre></td></tr></table></figure>
+<h4 id="角色新增-修改"><a href="#角色新增-修改" class="headerlink" title="角色新增/修改"></a>角色新增/修改</h4><table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色新增/修改</td>
+<td><a href="http://127.0.0.1:8080/security/rest/roleinfo/saveOrUpdate" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/roleinfo/saveOrUpdate</a></td>
+<td>roleinfo的json串 参数 2-2</td>
+<td>{‘success’:’true’,’message’:’保存成功’,result:保存成功的roleinfo的json串 }</td>
+<td>post</td>
+<td>入口传ID , 则为修改, 不传ID/传入ID不存在, 则为新增</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">参数 2-2</span><br><span class="line">/*</span><br><span class="line"> * 角色新增修改输入参数</span><br><span class="line"> */</span><br><span class="line"> </span><br><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: 2,        //角色ID</span><br><span class="line">    &quot;roleCode&quot;: &quot;manage&quot;,       //角色编码</span><br><span class="line">    &quot;roleName&quot;: &quot;省份管理员&quot;,       //角色名称</span><br><span class="line">    &quot;createTime&quot;: 1491111465000,    //创建日期</span><br><span class="line">    &quot;creatUser&quot;: &quot;1&quot;,       创建用户ID(String)</span><br><span class="line">    &quot;parentId&quot;: 1       父级角色ID</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="删除角色"><a href="#删除角色" class="headerlink" title="删除角色"></a>删除角色</h4><table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>删除角色</td>
+<td><a href="http://127.0.0.1:8080/security/rest/roleinfo/delete?id=100" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/roleinfo/delete?id=100</a></td>
+<td>id:角色ID</td>
+<td>{‘success’:’true’,’message’:’删除成功’,result:null}</td>
+<td>delete</td>
+</tr>
+</tbody>
+</table>
+<h4 id="角色数量查询接口"><a href="#角色数量查询接口" class="headerlink" title="角色数量查询接口"></a>角色数量查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色数量查询</td>
+<td><a href="http://127.0.0.1:8080/security/rest/role/count?cond={&quot;roleCode&quot;:&quot;root&quot;}" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/role/count?cond={&quot;roleCode&quot;:&quot;root&quot;}</a></td>
+<td>参数 2-3</td>
+<td>int</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色条数查询</td>
+<td>int int findRoleCount(Map&lt;String, Object&gt; map)</td>
+<td>参数 2-3</td>
+<td>int</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">参数 2-3</span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * 角色数量查询接口参数(均为模糊查询)</span><br><span class="line"> */</span><br><span class="line">    </span><br><span class="line">    roleCode    //角色编码</span><br><span class="line">    roleName    //角色名称</span><br><span class="line">    createTime      //创建时间</span><br></pre></td></tr></table></figure>
+<h3 id="组织机构相关"><a href="#组织机构相关" class="headerlink" title="组织机构相关"></a>组织机构相关</h3><p>组织机构实体json字典</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: &quot;ALL&quot;,        //机构编码(String)</span><br><span class="line">    &quot;orgName&quot;: &quot;全国&quot;,      //机构名称</span><br><span class="line">    &quot;type&quot;: &quot;111&quot;,      //机构类型</span><br><span class="line">    &quot;orgType&quot;: &#123;        //机构类型实体</span><br><span class="line">        &quot;id&quot;: &quot;111&quot;,</span><br><span class="line">        &quot;orgtypeName&quot;: &quot;行政机构&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;path&quot;: &quot;/ALL&quot;,     //机构层级路径</span><br><span class="line">    &quot;parentId&quot;: null,       //父级机构编码</span><br><span class="line">    &quot;memo&quot;: null,       //备注</span><br><span class="line">    &quot;createTime&quot;: 1487064288000,    //创建时间</span><br><span class="line">    &quot;creatUser&quot;: &quot;1&quot;,       //创建人ID</span><br><span class="line">    &quot;ord&quot;: null,            //排序</span><br><span class="line">    &quot;status&quot;: 1,        //状态(是否失效,1:有效,0:失效)</span><br><span class="line">    &quot;reserve1&quot;: null,       //预留字段</span><br><span class="line">    &quot;reserve2&quot;: null,</span><br><span class="line">    &quot;reserve3&quot;: null,</span><br><span class="line">    &quot;reserve4&quot;: null,</span><br><span class="line">    &quot;reserve5&quot;: null,</span><br><span class="line">    &quot;reserve6&quot;: null,</span><br><span class="line">    &quot;reserve7&quot;: null,</span><br><span class="line">    &quot;reserve8&quot;: null,</span><br><span class="line">    &quot;reserve9&quot;: null,</span><br><span class="line">    &quot;reserve10&quot;: null,</span><br><span class="line">    &quot;orgClass&quot;: null    //机构分类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="组织机构列表信息查询接口"><a href="#组织机构列表信息查询接口" class="headerlink" title="组织机构列表信息查询接口"></a>组织机构列表信息查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组织机构列表查询接口(单条件)</td>
+<td><a href="http://127.0.0.1:8080/security/rest/org/condition?p=orgName&amp;v=&#39;全国&#39;" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/org/condition?p=orgName&amp;v=&#39;全国&#39;</a></td>
+<td>p:组织机构属性  v:属性值 详细见 参数 3-1</td>
+<td>组织机构对象的序列化json串</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>组织机构列表查询接口(多条件)</td>
+<td><a href="http://127.0.0.1:8080/security/rest/org/list?cond={&quot;orgName&quot;:&quot;研发二部&quot;}" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/org/list?cond={&quot;orgName&quot;:&quot;研发二部&quot;}</a></td>
+<td>cond为一个表示条件的key/value组合,详细见 参数 3-2</td>
+<td>组织机构对象的序列化json串</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户列表查询接口</td>
+<td>List<orginfo>  findOrgByCondition(Map condition)</orginfo></td>
+<td>condition:属性条件组合</td>
+<td>List<orginfo>对象列表</orginfo></td>
+<td>参数 3-2</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">参数 3-1</span><br><span class="line">/*</span><br><span class="line"> * 组织机构查询(单条件)请求报文</span><br><span class="line">/*</span><br><span class="line"></span><br><span class="line">    //p为空默认查询所有</span><br><span class="line">    orgName     //机构名称</span><br><span class="line">    parentOrgId     //父级机构ID</span><br><span class="line">    userName        //用户姓名</span><br><span class="line">    userId          //用户ID</span><br><span class="line">    loginId         //用户登录ID</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">参数 3-2</span><br><span class="line">/*</span><br><span class="line"> * 组织机构查询(多条件)请求报文</span><br><span class="line">/*</span><br><span class="line"></span><br><span class="line">    //cond各参数and连接,cond为空,默认查询所有</span><br><span class="line">    id      //机构编码(ID)</span><br><span class="line">    orgName     //机构名称(模糊匹配)</span><br><span class="line">    parentOrg.id     //父级机构ID</span><br><span class="line">    parentOrg.orgName  //父级机构名称(模糊匹配)</span><br><span class="line">    orgType          //机构类型</span><br><span class="line">    path         //机构层级路径(模糊匹配)</span><br></pre></td></tr></table></figure>
+<h4 id="组织机构新增"><a href="#组织机构新增" class="headerlink" title="组织机构新增"></a>组织机构新增</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组织机构新增</td>
+<td><a href="http://127.0.0.1:8080/security/rest/org/save" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/org/save</a></td>
+<td>请求参数:参数3-3</td>
+<td>true/false</td>
+<td>post</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">参数 3-3</span><br><span class="line">/*</span><br><span class="line"> * 组织机构新增请求报文</span><br><span class="line">/*</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: &quot;Q000001&quot;,</span><br><span class="line">    &quot;orgName&quot;: &quot;东方国信东方国信东方国信QQ&quot;, </span><br><span class="line">    &quot;orgType&quot;:</span><br><span class="line">       &#123;&quot;id&quot;:&quot;111&quot;&#125;,</span><br><span class="line">    &quot;path&quot;: &quot;/ALL/A/C/E/F/QQ&quot;,</span><br><span class="line">    &quot;parentId&quot;: &quot;F&quot;,</span><br><span class="line">    &quot;memo&quot;: &quot;&quot;,</span><br><span class="line">    &quot;createTime&quot;: 1491361588000,</span><br><span class="line">    &quot;creatUser&quot;: &quot;1&quot;,</span><br><span class="line">    &quot;ord&quot;: null,</span><br><span class="line">    &quot;status&quot;: 1,</span><br><span class="line">    &quot;reserve1&quot;: &quot;&quot;, </span><br><span class="line">    &quot;reserve2&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve3&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve4&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve5&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve6&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve7&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve8&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve9&quot;: &quot;&quot;,</span><br><span class="line">    &quot;reserve10&quot;: &quot;&quot;,</span><br><span class="line">    &quot;orgClass&quot;: null </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="租户相关"><a href="#租户相关" class="headerlink" title="租户相关"></a>租户相关</h3><p>租户实体json字典(1.0.6版本)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;tenantId&quot;: &quot;tenant_system&quot;,    //租户ID</span><br><span class="line">    &quot;tenantCode&quot;: &quot;tenant_system&quot;,      //租户编码(多租户版本特有,和租户ID一致,兼容原来版本)</span><br><span class="line">    &quot;remark&quot;: null,         //备注</span><br><span class="line">    &quot;tenantName&quot;: &quot;系统租户&quot;,       //租户名称</span><br><span class="line">    &quot;ord&quot;: 1,           //排序</span><br><span class="line">    &quot;isSystem&quot;: true,       //是否是系统租户</span><br><span class="line">    &quot;parentId&quot;: null        //父级租户ID</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="租户认证接口"><a href="#租户认证接口" class="headerlink" title="租户认证接口"></a>租户认证接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>判定当前租户是否有效</td>
+<td><a href="http://127.0.0.1:8080/security/rest/tenant/validate/{租户id" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/tenant/validate/{租户id</a> }</td>
+<td>租户id</td>
+<td>{ ‘success’:’true’,’message’:’成功’,result:租户实体json }</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>判定当前租户是否有效</td>
+<td>boolean validateTenant(String tenantId)</td>
+<td>tenantId:租户id</td>
+<td>boolean:true/fasle</td>
+</tr>
+</tbody>
+</table>
+<h4 id="租户新增"><a href="#租户新增" class="headerlink" title="租户新增"></a>租户新增</h4><table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>租户新增</td>
+<td><a href="http://127.0.0.1:8080/security/rest/tenant/save" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/tenant/save</a></td>
+<td>tenantInfo的json串,查上边实体字典</td>
+<td>{‘success’:’true’,’message’:’保存成功’,result:保存成功的tenantInfo的json串 }</td>
+<td>post</td>
+</tr>
+</tbody>
+</table>
+<h4 id="用户的租户ID查询接口"><a href="#用户的租户ID查询接口" class="headerlink" title="用户的租户ID查询接口"></a>用户的租户ID查询接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户的租户ID查询</td>
+<td><a href="http://127.0.0.1:8080/security/rest/user/findTenantId?loginId=admin" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/user/findTenantId?loginId=admin</a></td>
+<td>用户登录名</td>
+<td>String : tenantID</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户的租户ID查询</td>
+<td>String findTenantIdByloginId(String loginId)</td>
+<td>loginId : 登录名</td>
+<td>String : tenantId</td>
+</tr>
+</tbody>
+</table>
+<h3 id="权限相关"><a href="#权限相关" class="headerlink" title="权限相关"></a>权限相关</h3><h4 id="鉴权接口"><a href="#鉴权接口" class="headerlink" title="鉴权接口"></a>鉴权接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>鉴权接口(资源id)</td>
+<td><a href="http://127.0.0.1:8080/security/rest/permission/has?rid=xxx&amp;uid=yyy" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/permission/has?rid=xxx&amp;uid=yyy</a></td>
+<td>rid:资源id,uid:用户id</td>
+<td>是否有权限 true;false</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>鉴权接口(资源code)</td>
+<td><a href="http://127.0.0.1:8080/security/rest//permission/hasByCode?resourceCode=xxx&amp;uid=yyy" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest//permission/hasByCode?resourceCode=xxx&amp;uid=yyy</a></td>
+<td>resourceCode:资源编码,uid:用户id</td>
+<td>是否有权限 true;false</td>
+<td>GET</td>
+<td></td>
+</tr>
+<tr>
+<td>获取主体的权限列表</td>
+<td><a href="http://127.0.0.1:8080/security/rest/permission/list?sid=yyy&amp;type=zzz" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/permission/list?sid=yyy&amp;type=zzz</a></td>
+<td>sid:主体id  type:主体类型(USER,ORG,ROLE )</td>
+<td>权限对象集的json表示</td>
+<td>GET</td>
+<td>主体id目前主要是userId ，也可以是角色id，组织id</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>鉴权接口(资源id)</td>
+<td>boolean isPermission(Long resourceId, Long userId)</td>
+<td>reourceId:资源id，userId:用户id</td>
+<td>是否许可访问：true/false</td>
+<td></td>
+</tr>
+<tr>
+<td>鉴权接口(资源code)</td>
+<td>boolean hasPermissionByCode(String resourceCode, Long userId)</td>
+<td>resourceCode:资源code，userId:用户id</td>
+<td>是否许可访问：true/false</td>
+<td></td>
+</tr>
+<tr>
+<td>获取主体的权限列表</td>
+<td>List      listPermission (long subjectId)</td>
+<td>subjectId:主体id</td>
+<td>权限对象的列表</td>
+<td>主体id目前主要是userId，也可以是角色id，组织id</td>
+</tr>
+</tbody>
+</table>
+<h4 id="授权接口"><a href="#授权接口" class="headerlink" title="授权接口"></a>授权接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>授权接口</td>
+<td><a href="http://127.0.0.1:8080/security/rest/authorize?resourceId=xxx&amp;masterValue=yyy&amp;masterType=zzz" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/authorize?resourceId=xxx&amp;masterValue=yyy&amp;masterType=zzz</a></td>
+<td>resourceId:资源id，masterValue:主体值, masterType:主体类型</td>
+<td></td>
+<td>PUT</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>授权接口</td>
+<td>void authorize(Long  resourceId,String masterValue,String masterType)</td>
+<td>resourceId:资源id，masterValue:主体值, masterType:主体类型</td>
+<td>void</td>
+<td>resourceId 特指数据实体类资源</td>
+</tr>
+</tbody>
+</table>
+<h4 id="菜单授权"><a href="#菜单授权" class="headerlink" title="菜单授权"></a>菜单授权</h4><table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>菜单授权</td>
+<td><a href="http://127.0.0.1:8080/security/rest/privilege/dataAuth?authIds=SECURITY_MANAGE&amp;masterType=USER&amp;masterValue=100028" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/privilege/dataAuth?authIds=SECURITY_MANAGE&amp;masterType=USER&amp;masterValue=100028</a></td>
+<td>authIds:菜单menu_code,多个用”,”隔开. masterType:主体类型(USER,ROLE,ORG) ,masterValue:主体ID(用户ID,角色ID,组织机构ID)</td>
+<td>{“success”:true,”message”:”授权成功!”,”result”:”SECURITY_MANAGE”} result为授权成功的菜单编码</td>
+<td>GET</td>
+<td>注意:使用该接口有一些约定规则,首页菜单/门户菜单的url资源编码为:PORTAL_MENU,过滤规则中首页菜单过滤规则的编码为:MENUINFO_CODE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="菜单权限收回"><a href="#菜单权限收回" class="headerlink" title="菜单权限收回"></a>菜单权限收回</h4><table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>菜单权限收回</td>
+<td><a href="http://127.0.0.1:8080/security/rest/privilege/dataCancel?cancelIds=SECURITY_MANAGE&amp;masterType=USER&amp;masterValue=100028" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/privilege/dataCancel?cancelIds=SECURITY_MANAGE&amp;masterType=USER&amp;masterValue=100028</a></td>
+<td>cancelIds:菜单menu_code,多个用”,”隔开. masterType:主体类型(USER,ROLE,ORG) ,masterValue:主体ID(用户ID,角色ID,组织机构ID)</td>
+<td>{“success”:true,”message”:”收回权限成功!”,”result”:”SECURITY_MANAGE”} result为取消成功的菜单编码</td>
+<td>GET</td>
+<td>注意:使用该接口有一些约定规则,首页菜单/门户菜单的url资源编码为:PORTAL_MENU,过滤规则中首页菜单过滤规则的编码为:MENUINFO_CODE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="资源注册接口"><a href="#资源注册接口" class="headerlink" title="资源注册接口"></a>资源注册接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资源注册接口</td>
+<td><a href="http://127.0.0.1:8080/security/rest/resource/" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/resource/</a></td>
+<td>Resource对象的json格式：例{ ‘resourceName’ : ‘bpm’,’resourceType’ : ‘1’ }</td>
+<td>资源ID</td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>资源注册接口</td>
+<td>String registerResource(Resources resources)</td>
+<td>resource:资源对象实例</td>
+<td>统一资源编码</td>
+</tr>
+</tbody>
+</table>
+<h3 id="日志相关"><a href="#日志相关" class="headerlink" title="日志相关"></a>日志相关</h3><h4 id="日志记录接口"><a href="#日志记录接口" class="headerlink" title="日志记录接口"></a>日志记录接口</h4><p>a. RESTful API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日志记录接口</td>
+<td><a href="http://127.0.0.1:8080/security/rest/log/logsave" target="_blank" rel="noopener">http://127.0.0.1:8080/security/rest/log/logsave</a></td>
+<td>admin,security,/security/masterType!list.action</td>
+<td>无返回值</td>
+<td>POST</td>
+<td>参数输入为字符串(loginId,syscode,访问URL),用”,”隔开</td>
+</tr>
+</tbody>
+</table>
+<p>b. Java API</p>
+<table>
+<thead>
+<tr>
+<th>接口名称　</th>
+<th>方法签名</th>
+<th>输入说明</th>
+<th>返回值说明</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日志记录接口</td>
+<td>void saveLog(String loginId,String syscode,String requestUrl)</td>
+<td>loginId:账号名，syscode:系统编码, requestUrl:访问URL</td>
+<td>void:无返回值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="门户菜单相关"><a href="#门户菜单相关" class="headerlink" title="门户菜单相关"></a>门户菜单相关</h3><p>门户菜单接口信息可在门户接口中查看更新.</p>
+<p>门户菜单实体json字典</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;id&quot;: 100,          //ID</span><br><span class="line">    &quot;menuCode&quot;: &quot;PORTAL_MANAGE&quot;,        //菜单编码</span><br><span class="line">    &quot;menuName&quot;: &quot;门户管理&quot;,             //菜单名称</span><br><span class="line">    &quot;menuDesc&quot;: &quot;门户管理&quot;,             //菜单描述</span><br><span class="line">    &quot;url&quot;: null,                        //菜单URL</span><br><span class="line">    &quot;appSysCode&quot;: null,                 //归属门户应用空间编码</span><br><span class="line">    &quot;serviceAppCode&quot;: null,             //菜单所属的服务提供方的appCode</span><br><span class="line">    &quot;icon&quot;: &quot;th-large&quot;,                 //图标</span><br><span class="line">    &quot;parentId&quot;: null                    //父级菜单ID</span><br><span class="line">    &quot;ord&quot;: 61,                          //排序</span><br><span class="line">    &quot;isDisable&quot;: null,                  //是否隐藏</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="菜单新增-修改"><a href="#菜单新增-修改" class="headerlink" title="菜单新增/修改"></a>菜单新增/修改</h4><table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>菜单新增/修改</td>
+<td><a href="http://127.0.0.1:8080/portal/rest/menuinfo/saveOrUpdate" target="_blank" rel="noopener">http://127.0.0.1:8080/portal/rest/menuinfo/saveOrUpdate</a></td>
+<td>PortalMenuinfo的json串 如:见门户菜单实体json字典</td>
+<td>{‘success’:’true’,’message’:’保存成功’,result:修改成功的PortalMenuinfo的json串 }</td>
+<td>post</td>
+<td>入口传ID , 则为修改, 不传ID, 则为新增</td>
+</tr>
+</tbody>
+</table>
+<h4 id="删除菜单"><a href="#删除菜单" class="headerlink" title="删除菜单"></a>删除菜单</h4><table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>删除菜单</td>
+<td><a href="http://127.0.0.1:8080/portal/rest/menuinfo/delete?id=1" target="_blank" rel="noopener">http://127.0.0.1:8080/portal/rest/menuinfo/delete?id=1</a></td>
+<td>id:菜单ID</td>
+<td>{‘success’:’true’,’message’:’删除成功’,result:null}</td>
+<td>delete</td>
+</tr>
+</tbody>
+</table>
+<h4 id="菜单查询"><a href="#菜单查询" class="headerlink" title="菜单查询"></a>菜单查询</h4><table>
+<thead>
+<tr>
+<th>接口名称</th>
+<th>url 举例</th>
+<th>输入</th>
+<th>输出</th>
+<th>请求方法</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>菜单查询</td>
+<td><a href="http://127.0.0.1:8080/portal/rest/menuinfo/list?cond={&quot;id&quot;:&quot;1&quot;}" target="_blank" rel="noopener">http://127.0.0.1:8080/portal/rest/menuinfo/list?cond={&quot;id&quot;:&quot;1&quot;}</a></td>
+<td>完全查询:id:菜单id,parentMenu.id:父级ID;模糊匹配:menuCode:菜单编码,menuName:菜单名称,menuDesc:菜单描述,serviceAppCode:菜单所属的服务提供方的appCode</td>
+<td>list的json串</td>
+<td>get</td>
+</tr>
+</tbody>
+</table>
+<h2 id="技术支持"><a href="#技术支持" class="headerlink" title="技术支持"></a>技术支持</h2><p>安全门户技术支持群QQ:610402041</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/07/门户系统安装部署说明/" rel="next" title="门户安装部署">
+                <i class="fa fa-chevron-left"></i> 门户安装部署
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/07/Security系统部署说明/" rel="prev" title="security系统部署说明书">
+                security系统部署说明书 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安全接口文档"><span class="nav-number">1.</span> <span class="nav-text">安全接口文档</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内容概要"><span class="nav-number">1.1.</span> <span class="nav-text">内容概要</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口概要"><span class="nav-number">1.1.1.</span> <span class="nav-text">接口概要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多租户接口使用说明"><span class="nav-number">1.1.2.</span> <span class="nav-text">多租户接口使用说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口类型"><span class="nav-number">1.2.</span> <span class="nav-text">接口类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java-API"><span class="nav-number">1.2.1.</span> <span class="nav-text">Java API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESTful-API"><span class="nav-number">1.2.2.</span> <span class="nav-text">RESTful API</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接口调用说明"><span class="nav-number">1.3.</span> <span class="nav-text">接口调用说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用户相关"><span class="nav-number">1.3.1.</span> <span class="nav-text">用户相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#身份认证接口"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">身份认证接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#得到当前登录用户"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">得到当前登录用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户信息查询接口-根据用户id"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">用户信息查询接口(根据用户id)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户列表信息查询接口"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">用户列表信息查询接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户数量查询接口"><span class="nav-number">1.3.1.5.</span> <span class="nav-text">用户数量查询接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户拓展属性查询接口"><span class="nav-number">1.3.1.6.</span> <span class="nav-text">用户拓展属性查询接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户拓展属性集查询接口"><span class="nav-number">1.3.1.7.</span> <span class="nav-text">用户拓展属性集查询接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户的角色信息查询接口"><span class="nav-number">1.3.1.8.</span> <span class="nav-text">用户的角色信息查询接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#角色相关"><span class="nav-number">1.3.2.</span> <span class="nav-text">角色相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#角色信息查询接口-多条件"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">角色信息查询接口(多条件)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#角色新增-修改"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">角色新增/修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除角色"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">删除角色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#角色数量查询接口"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">角色数量查询接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组织机构相关"><span class="nav-number">1.3.3.</span> <span class="nav-text">组织机构相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#组织机构列表信息查询接口"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">组织机构列表信息查询接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组织机构新增"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">组织机构新增</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#租户相关"><span class="nav-number">1.3.4.</span> <span class="nav-text">租户相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#租户认证接口"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">租户认证接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#租户新增"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">租户新增</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户的租户ID查询接口"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">用户的租户ID查询接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限相关"><span class="nav-number">1.3.5.</span> <span class="nav-text">权限相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#鉴权接口"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">鉴权接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#授权接口"><span class="nav-number">1.3.5.2.</span> <span class="nav-text">授权接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单授权"><span class="nav-number">1.3.5.3.</span> <span class="nav-text">菜单授权</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单权限收回"><span class="nav-number">1.3.5.4.</span> <span class="nav-text">菜单权限收回</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#资源注册接口"><span class="nav-number">1.3.5.5.</span> <span class="nav-text">资源注册接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日志相关"><span class="nav-number">1.3.6.</span> <span class="nav-text">日志相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#日志记录接口"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">日志记录接口</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#门户菜单相关"><span class="nav-number">1.3.7.</span> <span class="nav-text">门户菜单相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单新增-修改"><span class="nav-number">1.3.7.1.</span> <span class="nav-text">菜单新增/修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除菜单"><span class="nav-number">1.3.7.2.</span> <span class="nav-text">删除菜单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#菜单查询"><span class="nav-number">1.3.7.3.</span> <span class="nav-text">菜单查询</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术支持"><span class="nav-number">1.4.</span> <span class="nav-text">技术支持</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.5.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tgYVHQyjUbdejQfiqMrUz7Rq-gzGzoHsz',
+        appKey: 'dc8LuDhmj5ICoJLOt0qmwIo5',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
